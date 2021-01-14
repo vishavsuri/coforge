@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="5" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="10" time="16.199275">
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input" time="4.661064">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "GBP".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "GBP"..........................passed
+And Response should contain value "1.0" for "GBP"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 2" time="1.288707">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "HKD".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "HKD"..........................passed
+And Response should contain value "1.0" for "HKD"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Confirm that API responds with correct base value for currency based on input 3" time="1.276153">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "latest" "base" "NZD".....................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain base currency as "NZD"..........................passed
+And Response should contain value "1.0" for "NZD"...........................passed
+And Response should contain not null values for "INR,AUD"...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked" time="1.174668">
+        <failure message="java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;200&gt;&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:89)&#13;&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:835)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:647)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:633)&#13;&#10;&#9;at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)&#13;&#10;&#9;at ✽.API Should respond with status code as &quot;400&quot;(file:src/test/resources/features/ExchangeRates.feature:33)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="BKG"...............................passed
+Then API Should respond with status code as "400"...........................failed
+And Error message should be displayed as "Base 'BKG' is not supported.".....skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)
+	at ✽.API Should respond with status code as "400"(file:src/test/resources/features/ExchangeRates.feature:33)
+]]></failure>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked 2" time="1.310839">
+        <failure message="java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;200&gt;&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:89)&#13;&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:835)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:647)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:633)&#13;&#10;&#9;at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)&#13;&#10;&#9;at ✽.API Should respond with status code as &quot;400&quot;(file:src/test/resources/features/ExchangeRates.feature:33)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="123"...............................passed
+Then API Should respond with status code as "400"...........................failed
+And Error message should be displayed as "Base '123' is not supported.".....skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)
+	at ✽.API Should respond with status code as "400"(file:src/test/resources/features/ExchangeRates.feature:33)
+]]></failure>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate results when incorrect/invalid endpoint is invoked 3" time="1.264989">
+        <failure message="java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;200&gt;&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:89)&#13;&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:835)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:647)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:633)&#13;&#10;&#9;at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)&#13;&#10;&#9;at ✽.API Should respond with status code as &quot;400&quot;(file:src/test/resources/features/ExchangeRates.feature:33)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as ?base="@#$"...............................passed
+Then API Should respond with status code as "400"...........................failed
+And Error message should be displayed as "Base '@#$' is not supported.".....skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.ExchangeRatesAPITesting.api_Should_respond_with_status_code_as(ExchangeRatesAPITesting.java:81)
+	at ✽.API Should respond with status code as "400"(file:src/test/resources/features/ExchangeRates.feature:33)
+]]></failure>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for specific past date" time="1.47933">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-05-31" "base" "USD".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "2020-05-31"............................passed
+And Response should contain not null values for "NZD,INR"...................passed
+And Response should contain base currency as "USD"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for specific past date 2" time="1.254734">
+        <system-out><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2019-12-31" "base" "EUR".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "2019-12-31"............................passed
+And Response should contain not null values for "EUR,JPY"...................passed
+And Response should contain base currency as "EUR"..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for today when queried for a future date" time="1.165128">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;202[1-01-1]3&gt; but was:&lt;202[0-06-0]3&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:117)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:146)&#13;&#10;&#9;at stepDefinitions.ExchangeRatesAPITesting.Response_should_contain_expected_date(ExchangeRatesAPITesting.java:136)&#13;&#10;&#9;at ✽.Response should contain date as &quot;Today&quot;(file:src/test/resources/features/ExchangeRates.feature:63)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-06-03" "base" "EUR".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "Today".................................failed
+And Response for future date should match with response for today...........skipped
+And Response should contain not null values for "NZD,INR"...................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<202[1-01-1]3> but was:<202[0-06-0]3>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ExchangeRatesAPITesting.Response_should_contain_expected_date(ExchangeRatesAPITesting.java:136)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ExchangeRates.feature:63)
+]]></failure>
+    </testcase>
+    <testcase classname="Get and validate conversion rates for past and future dates using Foreign Exchange Rates API" name="Validate that API returns data for today when queried for a future date 2" time="1.323663">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;202[1-01-13]&gt; but was:&lt;202[0-12-31]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:117)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:146)&#13;&#10;&#9;at stepDefinitions.ExchangeRatesAPITesting.Response_should_contain_expected_date(ExchangeRatesAPITesting.java:136)&#13;&#10;&#9;at ✽.Response should contain date as &quot;Today&quot;(file:src/test/resources/features/ExchangeRates.feature:63)&#13;&#10;"><![CDATA[Given Foreign Exchange Rates API is accessible..............................passed
+When API is hit with end point as "2020-12-31" "base" "JPY".................passed
+Then API Should respond with status code as "200"...........................passed
+And Response should contain date as "Today".................................failed
+And Response for future date should match with response for today...........skipped
+And Response should contain not null values for "USD,CHF"...................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<202[1-01-13]> but was:<202[0-12-31]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.ExchangeRatesAPITesting.Response_should_contain_expected_date(ExchangeRatesAPITesting.java:136)
+	at ✽.Response should contain date as "Today"(file:src/test/resources/features/ExchangeRates.feature:63)
+]]></failure>
+    </testcase>
+</testsuite>
